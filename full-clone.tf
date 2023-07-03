@@ -19,12 +19,11 @@ resource "proxmox_vm_qemu" "testing02" {
     onboot = true
 
     # VM OS Settings
-    clone = "ubuntu-cloud"
+    clone = "VM 9000"
 
-    # VM System Settings
-    # I originally had this set to 1 and it was not finishing correctly.
-    # for now agent = 0 seems to work for me.
-    agent = 0
+    # make sure to install qemu-guest-agent on image cloning
+    # otherwise terafform will hang creating the vm
+    agent = 1
 
     # VM CPU Settings
     # set cpu cores
