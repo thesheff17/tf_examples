@@ -38,4 +38,4 @@ qm set 9000 --serial0 socket --vga serial0
 qm set 9000 -agent 1
 qm template 9000
 
-echo "cerate_vm_9000 completed."
+echo "create_vm_9000 completed."
